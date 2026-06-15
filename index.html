@@ -1,0 +1,163 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:linear-gradient(135deg,#1e1e2f,#2b5876);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.form-container{
+    width:100%;
+    max-width:420px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.35);
+    color:white;
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 15px;
+    border:3px solid #00d4ff;
+    box-shadow:0 0 15px rgba(0,212,255,0.5);
+}
+
+h2{
+    text-align:center;
+    color:#00d4ff;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    margin-bottom:6px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+}
+
+textarea{
+    resize:none;
+    height:75px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:13px;
+    border:none;
+    border-radius:10px;
+    background:#00d4ff;
+    color:black;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#00a6c9;
+    transform:scale(1.02);
+}
+
+.status{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+    font-size:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<img class="logo"
+src="https://cdn.discordapp.com/attachments/1425305534063579220/1516131972760469605/FB_IMG_1781544413041.jpg"
+alt="Logo">
+
+<h2>Registration Form</h2>
+
+<form id="regForm">
+
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your full name" required>
+
+<label>Age</label>
+<input type="number" id="age" placeholder="Enter your age" required>
+
+<label>Address</label>
+<textarea id="address" placeholder="Enter your address" required></textarea>
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+
+<label>Course</label>
+<select id="course" required>
+<option value="">Select Course</option>
+<option value="BSIT">BSIT</option>
+<option value="CoED">CoED</option>
+<option value="HM">HM</option>
+<option value="TM">TM</option>
+</select>
+
+<label>Year Level</label>
+<select id="year" required>
+<option value="">Select Year</option>
+<option value="1st Year">1st Year</option>
+<option value="2nd Year">2nd Year</option>
+<option value="3rd Year">3rd Year</option>
+<option value="4th Year">4th Year</option>
+</select>
+
+<button type="submit">Register</button>
+
+<div class="status" id="status"></div>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
